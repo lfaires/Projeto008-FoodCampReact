@@ -5,6 +5,10 @@ export default function Foods() {
     {food: "future", dishes: "Futuro Frango", altImages: "frango futuro packaging", description: "Opção de frango vegetariana", price: "23,50"}]
 
     return (
+        <div className="orders">
+        <div className="orders-top">
+            <p>Primeiro, sua comida</p>
+        </div>
         <div className="orders-body">
             <ul className="order-food">
                 {foodsMenu.map((foodMenu) => 
@@ -21,6 +25,7 @@ export default function Foods() {
                     </div>
                 </li> )} 
             </ul>    
+        </div>
         </div>
     )
 }

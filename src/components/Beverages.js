@@ -5,6 +5,10 @@ export default function Beverages() {
     {beverage: "mate", dishes: "Mate leão", altImages: "mate leão bottle and trees behind", description: "330 ml da bebida que é a cara do carioca", price: "6,75"}]
     
     return (
+        <div className="orders">
+        <div className="orders-top">
+            <p>Agora, sua bebida</p>
+        </div>
         <div className="orders-body">
             <ul className="order-beverage">
                 {beveragesMenu.map((beverageMenu) => 
@@ -21,6 +25,7 @@ export default function Beverages() {
                     </div>
                 </li> )} 
             </ul>    
+        </div>
         </div>
     )
 }

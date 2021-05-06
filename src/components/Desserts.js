@@ -5,6 +5,10 @@ export default function Desserts() {
     {dessert: "cake", dishes: "Bolo de pote", altImages: "two pot cakes", description: "Bolo de pote da vovó, feito com muito amor", price: "12,00"}]
     
     return (
+        <div className="orders">
+        <div className="orders-top">
+            <p>Por fim, sua sobremesa</p>
+        </div>
         <div className="orders-body">
             <ul className="order-dessert">
                 {dessertsMenu.map((dessertMenu) => 
@@ -21,6 +25,7 @@ export default function Desserts() {
                     </div>
                 </li> )} 
             </ul>    
+        </div>
         </div>
     )
 }
