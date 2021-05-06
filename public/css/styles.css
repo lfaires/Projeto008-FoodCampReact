@@ -2,7 +2,7 @@ body {
     background: #E5E5E5;
 }
 
-.top {
+header {
     width: 100vw;
     height: 92px;
     background:#CF2B2B;
@@ -118,7 +118,7 @@ ion-icon {
     color: #FFF;
 }
 
-.bottom {
+footer {
     background: #FFF;
     width: 100vw;
     height: 92px;
