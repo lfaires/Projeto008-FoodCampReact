@@ -90,6 +90,7 @@ li :last-child > span {
 }
 
 img {
+    margin: 0 auto;
     width: 144px;
     height: 87px;
     border-radius: 3px;
@@ -219,17 +220,9 @@ button {
     display: none;
 }
 
-.unhide { 
-    display: block;
-}
-
-.activeli {
-    border: 3px solid #32B72F;
+.active {
+    border: 4px solid #32B72F;
     border-radius: 9px;
-}
-
-.activeicon {
-    color:#32B72F;
 }
 
 .counter {
