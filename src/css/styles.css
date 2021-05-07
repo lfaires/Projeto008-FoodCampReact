@@ -56,9 +56,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow-x: scroll;
+    overflow: scroll;
     -ms-overflow-style: none;
-    scrollbar-width: none;  
 }
 
 li {
@@ -188,7 +187,7 @@ button {
     background: #FFFFFF;
     font-size: 22px;
     width: 91%;
-    height: 35%;
+    height: 50%;
     border-radius: 9px;
     font-family: roboto;
 }
@@ -213,7 +212,7 @@ button {
     border-radius: 9px;
 }
 
-.counter {
+.amount {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -229,7 +228,6 @@ button {
     color:#32B72F;
 }
 
- /*-------HIDE SCROLLBAR--------*/
 .food::-webkit-scrollbar, .beverage::-webkit-scrollbar, .dessert::-webkit-scrollbar {
     display: none;
 }

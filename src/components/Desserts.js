@@ -4,6 +4,8 @@ import Item from "./Item"
 export default function Desserts(props) {
     const desserts = props.menu
     const setSelected = props.selected
+    const setDessert = props.setDessert
+    const dessert = props.dessert
 
     return (
         <div className="orders">
@@ -13,7 +15,7 @@ export default function Desserts(props) {
         <div className="orders-body">
             <ul className="order-dessert">
                 {
-                    desserts.map((item) => <Item item={item} selected={setSelected}/>)
+                    desserts.map((item) => <Item item={item} selected={setSelected} setOption={setDessert} option={dessert}/>)
                 } 
             </ul>     
         </div>

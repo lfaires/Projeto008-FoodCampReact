@@ -1,14 +1,15 @@
 export default function ReviewButton(props) {
-    
+    const {food, beverage, dessert} = props
+
     function backToOrderScreen() {
         props.nextScreen(false)
     }
 
     const message = `
         Olá, gostaria de fazer o pedido:
-        - Prato: Frango Yin Yang (2x)
-        - Bebida: Coquinha Gelada
-        - Sobremesa: Pudim
+        ${food.map( item => "-Prato: " + item.title + "(" + item.amount + "x)")}
+        ${beverage.map( item => "-Bebida: " + item.title + "(" + item.amount + "x)")}
+        ${dessert.map( item => "-Sobremesa: " + item.title + "(" + item.amount + "x)")}
         Total: R$ 27.70`;
 
     function urlMessage(){

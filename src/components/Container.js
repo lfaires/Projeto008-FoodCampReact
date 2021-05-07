@@ -5,6 +5,12 @@ import Desserts from "./Desserts"
 
 export default function Container(props) {
     const setAllSelected = props.selected
+    const setFood = props.setFood
+    const setBeverage = props.setBeverage
+    const setDessert = props.setDessert
+    const food = props.food
+    const beverage = props.beverage
+    const dessert = props.dessert
     const [selectFood, setSelectFood] = React.useState(0)
     const [selectBeverage, setSelectBeverage] = React.useState(0)
     const [selectDessert, setSelectDessert] = React.useState(0)
@@ -81,9 +87,9 @@ export default function Container(props) {
 
     return (
         <div className="container">
-            <Foods selected={setSelectFood} menu={menu.foods}/>
-            <Beverages selected={setSelectBeverage} menu={menu.beverages}/>
-            <Desserts selected={setSelectDessert} menu={menu.desserts}/>
+            <Foods selected={setSelectFood} menu={menu.foods} setFood={setFood} food={food}/>
+            <Beverages selected={setSelectBeverage} menu={menu.beverages} setBeverage={setBeverage} beverage={beverage}/>
+            <Desserts selected={setSelectDessert} menu={menu.desserts} setDessert={setDessert} dessert={dessert}/>
         </div>
     )
 }
