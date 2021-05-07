@@ -1,24 +1,9 @@
 import React from "react"
+import Item from "./Item"
 
-export default function Desserts() {
-    const dessertsMenu = 
-    [{dessert: "pudding", dishes: "Pudim", altImages: "american pudding", description: "Pudim de leite a partir de R$ 7,90", price: "7,90"},
-    {dessert: "brownie", dishes: "Brownie", altImages: "several brownie pieces", description: "Brownie do Luiz, o melhor da Tijuca", price: "10,00"}, 
-    {dessert: "cake", dishes: "Bolo de pote", altImages: "two pot cakes", description: "Bolo de pote da vovó, feito com muito amor", price: "12,00"}]
-    
-    const [counter, setCounter] = React.useState(0)
-
-    function add() {
-        setCounter(counter+1)
-    }
-
-    function remove() {
-        if(counter === 0){
-            setCounter(0)
-        } else {
-            setCounter(counter-1)
-        }
-    }
+export default function Desserts(props) {
+    const desserts = props.menu
+    const setSelected = props.selected
 
     return (
         <div className="orders">
@@ -27,26 +12,10 @@ export default function Desserts() {
         </div>
         <div className="orders-body">
             <ul className="order-dessert">
-                {dessertsMenu.map((dessertMenu) => 
-                <li className={dessertMenu.dessert}>   
-                    <img src={"assets/images/" + dessertMenu.dessert + ".jpg"} alt={dessertMenu.altImages} />
-                    
-                    <div> <p className="dishes">{dessertMenu.dishes}</p> </div>
-                        
-                    <div> <p className="description">{dessertMenu.description}</p> </div>
-                        
-                    <div>
-                        <div>
-                            <span><span>&#82;&#36;&nbsp;</span><span className="price">{dessertMenu.price}</span></span>
-                        </div>
-                        <div className="counter" >
-                            <div className="minus" ><ion-icon onClick={remove} name="remove-outline"></ion-icon></div>
-                            <div>{counter}</div>
-                            <div className="plus"><ion-icon onClick={add} name="add-outline"></ion-icon></div>
-                        </div>    
-                    </div>
-                </li> )} 
-            </ul>    
+                {
+                    desserts.map((item) => <Item item={item} selected={setSelected}/>)
+                } 
+            </ul>     
         </div>
         </div>
     )

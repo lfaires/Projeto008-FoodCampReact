@@ -4,7 +4,7 @@ import ConfirmButton from "./ConfirmButton"
 export default function Footer(props) {
   return (
     <footer>
-      { !props.Button ? <SelectButton /> : <ConfirmButton openConfirmationScreen={props.openConfirmationScreen}/> }
+      { !props.Button ? <SelectButton /> : <ConfirmButton nextScreen={props.nextScreen}/> }
     </footer>
   )
 }

@@ -1,4 +1,4 @@
-export default function OrderConfirmation() {
+export default function OrderConfirmation(props) {
     return(
         <div className="confirmation">
             <div>

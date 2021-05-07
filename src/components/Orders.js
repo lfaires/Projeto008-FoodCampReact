@@ -1,75 +1,17 @@
-import React from "react"
+{/*import React from "react"
 import Counters from "./Counters"
 
 function Orders(props) {
-    let menu = [
-            {type: "food", options: [
-            {
-                food: "chicken", 
-                dishes: "Frango Yin Yang", 
-                altImages: "chicken, fries, salad and sauce", 
-                description: "Um pouco de batata, um pouco de salada", 
-                price: "16,90"
-            },{   
-                food: "beef", 
-                dishes: "Picanha do Chef", 
-                altImages: "four delicious beefs", 
-                description: "Suculenta picanha, arroz e vinagrete", 
-                price: "64,99"
-            },{
-                food: "future", 
-                dishes: "Futuro Frango", 
-                altImages: "frango futuro packaging", 
-                description: "Opção de frango vegetariana", 
-                price: "23,50"}]}, 
-            
-            {type: "beverage", options: [
-            {
-                beverage: "coke", 
-                dishes: "Refrigerante", 
-                altImages: "Coke can", 
-                description: "Lata 350 ml a partir de R$ 4,90", 
-                price: "4,90"
-            },{
-                beverage: "bud", 
-                dishes: "Budweiser", 
-                altImages: "Budweiser can", 
-                description: "350 ml da cerveja que conquistou o Brasil", 
-                price: "8,00"
-            },{
-                beverage: "mate", 
-                dishes: "Mate leão", 
-                altImages: "mate leão bottle and trees behind", 
-                description: "330 ml da bebida que é a cara do carioca", 
-                price: "6,75"}]},
-                
-            {type: "dessert", options: [
-            {
-                dessert: "pudding", 
-                dishes: "Pudim", 
-                altImages: "american pudding", 
-                description: "Pudim de leite a partir de R$ 7,90", 
-                price: "7,90"
-            },{
-                dessert: "brownie", 
-                dishes: "Brownie", 
-                altImages: "several brownie pieces", 
-                description: "Brownie do Luiz, o melhor da Tijuca", 
-                price: "10,00"
-            },{
-                dessert: "cake", 
-                dishes: "Bolo de pote", 
-                altImages: "two pot cakes", 
-                description: "Bolo de pote da vovó, feito com muito amor", 
-                price: "12,00"}]}]
+    const { categories } = props
+    const {foods, beverages, desserts} = props.menu
         
     const [counter, setCounter] = React.useState(0)
-    const [activate, setActivate] = React.useState(false)
+    const [selected, setSelected] = React.useState(false)
 
     function add() {
-        if(activate) {
+        if(selected) {
             setCounter(counter+1)
-            setActivate(true)
+            setSelected(true)
         }
     }
 
@@ -88,19 +30,18 @@ function Orders(props) {
             </div>
             <div className="orders-body">
                 <ul className={"order-" + props.type}>
-                    <li className={menu.type}>
-                        <img src={"assets/images/" + menu.food + ".jpg"} alt={menu.altImages}  />
-                        <div><p className="dishes">{menu.dishes}</p></div>
-                        <div><p className="description">{menu.description}</p></div>
+                {
+                    foodsMenu.map((item) => 
+                    <li className={item.dishes + " " + (counter === 0 ? "" : (activate? "select" : ""))} onClick={selected}>  
+                        <Details dishes={item.dishes} altImg={item.altImages} title={item.title} text={item.text} /> 
                         <div>
-                            <div>
-                                <span><span>&#82;&#36;&nbsp;</span><span className="price">{menu.price}</span></span>
-                            </div>
-                            {<Counters add={add} remove={remove} counter={counter} />} 
+                            <Price price={item.price}/>
+                            {counter !== 0 ? <Counters add={add} remove={remove} counter={counter} />: null} 
                         </div>
-                    </li>
+                    </li> )
+                } 
                 </ul>
             </div>
         </div>
     )
-}
+}*/}
