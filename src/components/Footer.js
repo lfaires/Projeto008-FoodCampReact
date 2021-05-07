@@ -1,8 +1,10 @@
-export default function Footer() {
-    return (
-        <footer>
-          <button className="select-item">Selecione os 3 itens <br />para fechar o pedido</button> 
-          <button className="checkout-order hide" onClick="confirmOrder()">Fechar pedido</button>
-        </footer>
-    )
+import SelectButton from "./SelectButton"
+import ConfirmButton from "./ConfirmButton"
+
+export default function Footer(props) {
+  return (
+    <footer>
+      { !props.Button ? <SelectButton /> : <ConfirmButton openConfirmationScreen={props.openConfirmationScreen}/> }
+    </footer>
+  )
 }

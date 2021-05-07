@@ -3,7 +3,7 @@ import Beverages from "./Beverages"
 import Desserts from "./Desserts"
 import Orders from "./Orders"
 
-export default function Container() {  
+export default function Container(props) {  
     const categories = [
         {
             type: "food", 

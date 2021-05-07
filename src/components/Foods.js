@@ -45,7 +45,7 @@ export default function Foods() {
     }
 
     function selected() {
-        if(!activate && counter === 0) {
+        if(activate === false && counter === 0) {
             setCounter(counter+1)
             setActivate(true)
         } else if(counter === 0){
@@ -60,8 +60,8 @@ export default function Foods() {
         </div>
         <div className="orders-body">
             <ul className="order-food">
-                {foodsMenu.map((foodMenu, index) => 
-                <li key={index} className={foodMenu.food + " " + (activate? "active" : "")} onClick={selected}>  
+                {foodsMenu.map((foodMenu) => 
+                <li className={foodMenu.food + " " + (counter === 0 ? "" : (activate? "active" : ""))} onClick={selected}>  
                     <Details food={foodMenu.food} altImg={foodMenu.altImages} dishes={foodMenu.dishes} description={foodMenu.description} /> 
                     <div>
                         <Price price={foodMenu.price}/>

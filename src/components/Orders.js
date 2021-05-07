@@ -88,7 +88,7 @@ function Orders(props) {
             </div>
             <div className="orders-body">
                 <ul className={"order-" + props.type}>
-                    <li className={menu.food}>
+                    <li className={menu.type}>
                         <img src={"assets/images/" + menu.food + ".jpg"} alt={menu.altImages}  />
                         <div><p className="dishes">{menu.dishes}</p></div>
                         <div><p className="description">{menu.description}</p></div>
